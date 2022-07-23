@@ -1,1 +1,1 @@
-# Joltik - Link Shortener
+Easy Link Shortener
