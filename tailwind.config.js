@@ -10,6 +10,9 @@ module.exports = {
 				"main-text": "#3DCBBB",
 				"main-accent": "#D66C63",
 			},
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif']
+			},
 		},
 	},
 	plugins: [],

@@ -2,12 +2,11 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { withTRPC } from "@trpc/next";
 import { AppRouter } from "./api/trpc/[trpc]";
-import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</>
 	);
 }
