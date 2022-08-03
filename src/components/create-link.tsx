@@ -35,7 +35,9 @@ const CreateLinkForm: NextPage = () => {
 			<div className="w-full flex flex-col justify-center align-middle items-center ">
 				<div>
 					<div className="flex flex-col mb-6 justify-center">
-						<h1 className="font-bold text-5xl text-main-text ">Here is your final URL</h1>
+						<h1 className="font-bold text-5xl text-main-text ">
+							Here is your final URL
+						</h1>
 						<span className="text-2xl text-main-text mb-2">Enjoy sharing!</span>
 						<h2>{`${url}/${form.slug}`}</h2>
 					</div>
@@ -67,11 +69,13 @@ const CreateLinkForm: NextPage = () => {
 	return (
 		<div className="flex flex-col justify-center  h-screen sm:w-2/3 md:w-1/2 lg:w-1/3">
 			<div className="flex flex-col mb-6">
-				<h1 className="font-bold text-5xl text-main-text ">Shorten your longest URLs with ease</h1>
+				<h1 className="font-bold text-5xl text-main-text ">
+					Shorten your longest URLs with ease
+				</h1>
 				<span className="text-2xl text-main-text">Blazing fast redirect</span>
 			</div>
 			<form
-				onSubmit={e => {
+				onSubmit={(e) => {
 					e.preventDefault();
 					createSlug.mutate({ ...form });
 				}}
@@ -86,7 +90,7 @@ const CreateLinkForm: NextPage = () => {
 					<span className="font-medium mr-2">{url}/</span>
 					<input
 						type="text"
-						onChange={e => {
+						onChange={(e) => {
 							setForm({
 								...form,
 								slug: e.target.value,
@@ -119,7 +123,7 @@ const CreateLinkForm: NextPage = () => {
 					<span className="font-medium mr-2">Link</span>
 					<input
 						type="url"
-						onChange={e => setForm({ ...form, url: e.target.value })}
+						onChange={(e) => setForm({ ...form, url: e.target.value })}
 						placeholder="https://google.com"
 						className={input}
 						required
